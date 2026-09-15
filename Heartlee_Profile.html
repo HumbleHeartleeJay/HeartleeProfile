@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Heartlee Student Profile System</title>
+</head>
+<body>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+  :root {
+    --forest-900: #0b2e22;
+    --forest-800: #123f2e;
+    --forest-600: #1f5c43;
+    --cream-50: #f7f4ec;
+    --cream-100: #efe9d9;
+    --sand-200: #ddd3b6;
+    --gold-500: #c69a3d;
+    --gold-600: #a97d2c;
+    --gold-100: #f1e3c2;
+    --ink-900: #1d2b24;
+    --ink-600: #4a5c53;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background-color: var(--cream-50);
+    color: var(--ink-900);
+    line-height: 1.6;
+  }
+
+  /* ===== NAVIGATION ===== */
+  nav {
+    background-color: var(--forest-900);
+    padding: 14px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 14px rgba(11, 46, 34, 0.25);
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  nav a {
+    color: var(--cream-100);
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  nav a:hover {
+    color: var(--gold-500);
+    border-bottom-color: var(--gold-500);
+  }
+
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 48px 10%;
+    border-bottom: 1px solid var(--sand-200);
+  }
+
+  h2 {
+    font-family: "Lora", Georgia, serif;
+    font-weight: 600;
+    color: var(--forest-900);
+    border-left: 5px solid var(--gold-500);
+    padding-left: 14px;
+    margin-bottom: 22px;
+    font-size: 24px;
+  }
+
+  h3 {
+    font-family: "Lora", Georgia, serif;
+    color: var(--gold-600);
+    margin-top: 22px;
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+
+  /* ===== HOME ===== */
+  #home {
+    background: linear-gradient(160deg, var(--forest-900) 0%, var(--forest-800) 55%, #16473a 100%);
+    color: var(--cream-50);
+    text-align: center;
+    padding: 70px 10%;
+  }
+
+  #home img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--gold-500);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    margin-bottom: 18px;
+  }
+
+  #home h1 {
+    font-family: "Lora", Georgia, serif;
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+
+  #home p.motto {
+    font-style: italic;
+    color: var(--gold-100);
+    margin-bottom: 12px;
+  }
+
+
+
+
+.project-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.project-img1 {
+  width: 220px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--sand-200);
+  flex-shrink: 0;
+}
+
+.project-img2{
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--sand-200);
+  flex-shrink: 0;
+}
+
+.project-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.project-info p {
+  margin-bottom: 6px;
+}
+
+.project-img-link {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.project-img-link:hover .project-img {
+  opacity: 0.85;
+}
+
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--sand-200);
+  background-color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(11, 46, 34, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 10px 22px rgba(11, 46, 34, 0.16);
+  transform: translateY(-3px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item p {
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--ink-600);
+}
+
+
+
+  /* ===== ABOUT ME ===== */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  .info-table tr:nth-child(even) {
+    background-color: var(--cream-100);
+  }
+
+  .info-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--sand-200);
+  }
+
+  .info-table td:first-child {
+    font-weight: 600;
+    color: var(--forest-900);
+    width: 200px;
+  }
+
+  /* ===== CARDS (Education, Skills, Projects, etc.) ===== */
+  .card {
+    background-color: #ffffff;
+    border: 1px solid var(--sand-200);
+    border-left: 3px solid var(--gold-500);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(11, 46, 34, 0.05);
+    transition: box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 18px rgba(11, 46, 34, 0.1);
+  }
+
+  .card h4 {
+    font-family: "Lora", Georgia, serif;
+    color: var(--forest-800);
+    margin-bottom: 6px;
+  }
+
+  ul {
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  /* ===== SKILL TAGS ===== */
+  .tag {
+    display: inline-block;
+    background-color: #e4f0e9;
+    color: var(--forest-800);
+    border: 1px solid #a9cbb7;
+    padding: 5px 13px;
+    border-radius: 15px;
+    font-size: 14px;
+    margin: 4px 4px 0 0;
+  }
+
+  .tag.blue {
+    background-color: var(--gold-100);
+    color: #7a5a1e;
+    border: 1px solid var(--gold-500);
+  }
+
+  
+
+
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: var(--forest-900);
+    color: var(--cream-100);
+    text-align: center;
+    padding: 24px 10%;
+    font-size: 14px;
+  }
+
+  footer a {
+    color: var(--gold-500);
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.2s ease;
+  }
+
+  footer a:hover {
+    color: var(--gold-100);
+  }
+  </style>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#resume">Resume</a>
+  </nav>
+
+  <section id="home">
+    <img src="profile.jpg" alt="Profile Photo">
+    <h1>Heartlee Jay Alvizo Virtudazo</h1>
+    <p class="motto">" if you're tired just sleep"</p>
+    <p>Welcome to my student profile! Feel free to look around and learn more about me.</p>
+  </section>
+
+
+  <section id="about">
+    <h2>About Me</h2>
+    <table class="info-table">
+      <tr><td>Full Name</td><td>Heartlee Jay Alvizo Virtudazo</td></tr>
+      <tr><td>Age</td><td>19 years old</td></tr>
+      <tr><td>Address</td><td>P-5 San Antonio, Bislig City, Surigao del Sur, Philippines</td></tr>
+      <tr><td>Course & Year Level</td><td>BS Information Technology, 1st Year</td></tr>
+      <tr><td>Short Biography</td><td>I am a Bachelor of Science in Information Technology (BSIT) student from a simple and hardworking family. My family inspires me to continue studying and work toward achieving my goals in life. I enjoy creating simple designs and learning new skills that help me improve my creativity and technical abilities.</td></tr>
+      <tr><td>Career Goals</td><td>My career goal is to become a successful IT professional. I want to continue learning and improving my knowledge and skills in Information Technology so I can prepare myself for future opportunities. I hope to find a good and stable job that will allow me to support my family, provide them with a better life, and achieve my personal and professional goals.</td></tr>
+    </table>
+  </section>
+
+
+  <section id="education">
+    <h2>Educational Background</h2>
+
+    <div class="card">
+      <h4>Elementary School</h4>
+      <p>Requina Central Elementary School (2018 - 2019)</p>
+    </div>
+
+    <div class="card">
+      <h4>High School</h4>
+      <p>Mangagoy National High School (2022 - 2023)</p>
+    </div>
+
+    <div class="card">
+      <h4>Senior High School</h4>
+      <p>Mangagoy National High School - HUMMS Strand (2024- 2025)</p>
+    </div>
+
+    <div class="card">
+      <h4>College (Current)</h4>
+      <p>De La Salle John Bosco College - BS Information Technology (2025 - Present)</p>
+    </div>
+  </section>
+
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <h3>Programming Languages</h3>
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag blue">Java Script (little learning)</span>
+    <span class="tag blue">Python (Biginner)</span>
+
+    <h3>Software Applications</h3>
+    <span class="tag">Micro Soft Office</span>
+    <span class="tag">Canva</span>
+    <span class="tag">VS Code</span>
+    <span class="tag">XAMPP</span>
+    <span class="tag">Claude, Chat GPT A.I</span>
+    <span class="tag">Adobe XD</span>
+    <span class="tag">Figma</span>
+
+
+    <h3>Soft Skills</h3>
+    <span class="tag blue">Communication</span>
+    <span class="tag blue">Teamwork</span>
+    <span class="tag blue">Time Management</span>
+    <span class="tag blue">Good Manners</span>
+  </section>
+
+
+  <section id="projects">
+  <h2>Projects</h2>
+
+
+
+  <div class="card project-card">
+    <a href="explore.png" target="_blank" class="project-img-link">
+      <img src="explore.png" alt="Student Information System Screenshot" class="project-img1">
+    </a>
+    <div class="project-info">
+      <h4>Project Title: EXPLORE application</h4>
+      <p><strong>Description:</strong> A simple third party application about our Topic in World Religion in SHS, this also being use for research porouses in Research Festival (2nd Placer).</p>
+      <p><strong>Technologies Used:</strong> HTML, CSS, Adobe XD, APK Builder</p>
+      <p><strong>Status:</strong> Completed</p>
+    </div>
+  </div>
+
+  <div class="card project-card">
+    <a href="discrete math app.png" target="_blank" class="project-img-link">
+      <img src="discrete math app.png" alt="Student Information System Screenshot" class="project-img1">
+    </a>
+    <div class="project-info">
+      <h4>Project Title: Discrete Math Project</h4>
+      <p><strong>Description:</strong> A simple third party appliccation about our Discrete Math topics. I choose Binomial Coefficients topic here.</p>
+      <p><strong>Technologies Used:</strong> HTML, CSS, Adobe XD, APK Builder</p>
+      <p><strong>Status:</strong> Completed</p>
+    </div>
+  </div>
+
+
+
+</section>
+
+
+
+  <section id="achievements">
+    <h2>Certificates and Achievements</h2>
+
+    <div class="card">
+      <h4>Trainings Attended</h4>
+      <ul>
+        <li>BSP Jamboree (2025)</li>
+        <li>Red Cross (2025)</li>
+        <li>NSTP (2026)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Certificates Earned</h4>
+      <ul>
+        <li>Research Paper HUMMS category 2nd Placer. SHS Research Festival 2025</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Academic Awards</h4>
+      <ul>
+        <li>Honorable mention, SHS 2024-2025</li>
+        <li>Honorable mention, 1st, 2nd, 3rd Semester. 2025-2026</li>
+        <li>Service Awardee YES-O & BSP</li>
+        <li>Research 2nd Placer</li>
+        <li>Loyalty Award in MNHS</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+
+  <div class="gallery-item">
+      <a href="humss gwapo.jpg" target="_blank">
+        <img src="humss gwapo.jpg" alt="Gallery photo 2">
+      </a>
+      <p>HUMMS Student na Gwapo</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="nstp.jpg" target="_blank">
+        <img src="nstp.jpg" alt="Gallery photo 2">
+      </a>
+      <p>NSTP Student na Gwapo</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="award.jpg" target="_blank">
+        <img src="award.jpg" alt="Gallery photo 3">
+      </a>
+      <p>Awards & Graduation</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="my cat.jpg" target="_blank">
+        <img src="my cat.jpg" alt="Gallery photo 4">
+      </a>
+      <p>My Cat</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="bsp.jpg" target="_blank">
+        <img src="bsp.jpg" alt="Gallery photo 5">
+      </a>
+      <p>BSP Jamboree</p>
+    </div>
+
+    <div class="gallery-item" target="_blank">
+      <a href="cave.jpg">
+        <img src="cave.jpg" alt="Gallery photo 6">
+      </a>
+      <p>BSP cave exploring</p>
+    </div>
+
+    <div class="gallery-item">
+      <a href="friends.jpg" target="_blank">
+        <img src="friends.jpg" alt="Gallery photo 7">
+      </a>
+      <p>Friends #Jboy Boarders</p>
+    </div>
+
+    
+
+  </div>
+</section>
+
+
+  <section id="resume">
+    <h2>Resume / Curriculum Vitae</h2>
+    <p>You may view or download my resume using the link below.</p>
+    <p style="margin-top:10px;">
+      <a href="https://drive.google.com/file/d/1a9e-0bOoNsVgdMmfIB0ZW2f8cfexEUZL/view?usp=sharing" style="color:#a97d2c; font-weight:bold;">Download Resume (PDF)</a>
+    </p>
+
+    <h3>Work Experience</h3>
+    <p>No formal work experience yet, open to on the job training,part time opportunities.</p>
+
+    <h3>References</h3>
+    <p>Available upon request.</p>
+  </section>
+
+ 
+
+
+  <footer>
+    <p>@2026 Heartlee Jay A. Virtudazo. All Rights Reserved.</p>
+    <p>
+      <a href="https://www.facebook.com/heartlee.jay.virtudazo.2024" target="_blank">Facebook</a> |
+      <a href="https://mail.google.com/mail/u/0/#search/in%3Asent+heartleevirtudazo99%40gmail.com" target="_blank">Email</a> |
+      <a href="https://www.linkedin.com/in/virtudazo-heartlee-a-9b2455437/" target="_blank">linkedin</a>
+
+    </p>
+    <p>Last Updated: July 2026</p>
+  </footer>
+
+</body>
+</html>
