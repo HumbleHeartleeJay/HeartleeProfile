@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heartlee Student Profile System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS.css">
+
+</head>
+<body>
+
+
+  <div class="mobile-bar">
+    <span>Heartlee Virtudazo</span>
+    <button id="menuToggle" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+  </div>
+  <nav class="mobile-nav-panel" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#resume">Resume</a>
+  </nav>
+
+
+  <nav class="sidenav" id="sidenav">
+    <div class="brand">Heartlee Virtudazo<span>My Portfolio</span></div>
+    <ul>
+      <li><a href="#home" data-nav>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        Home</a></li>
+      <li><a href="#about" data-nav>
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+        About Me</a></li>
+      <li><a href="#education" data-nav>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg>
+        Education</a></li>
+      <li><a href="#skills" data-nav>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 6L2 12l6 6"/><path d="M16 6l6 6-6 6"/></svg>
+        Skills</a></li>
+      <li><a href="#projects" data-nav>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 7l2-3h5l2 3h9v11H3z"/></svg>
+        Projects</a></li>
+      <li><a href="#achievements" data-nav>
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 13l-1.5 8 5-2.5 5 2.5-1.5-8"/></svg>
+        Achievements</a></li>
+      <li><a href="#gallery" data-nav>
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-4 4-3-3-6 6"/></svg>
+        Gallery</a></li>
+      <li><a href="#resume" data-nav>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        Resume</a></li>
+    </ul>
+    <div class="foot-note">&copy; 2026 Heartlee Jay A. Virtudazo</div>
+  </nav>
+
+  <div class="page">
+
+    <section id="home">
+      <div class="portrait">
+        <img src="profile.jpg" alt="Profile Photo">
+      </div>
+      <div class="hero-text">
+        <h1>Heartlee Jay Alvizo Virtudazo</h1>
+        <p class="motto">" if you're tired just sleep"</p>
+        <p class="welcome">Welcome to my student profile! Feel free to look around and learn more about me.</p>
+        <div class="hero-badges">
+          <span>BSIT &middot; 1st Year</span>
+          <span>De La Salle John Bosco College</span>
+          <span>Bislig City, Surigao del Sur</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-head">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+        <h2>About Me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="item"><div class="label">Full Name</div><div class="value">Heartlee Jay Alvizo Virtudazo</div></div>
+        <div class="item"><div class="label">Age</div><div class="value">19 years old</div></div>
+        <div class="item"><div class="label">Address</div><div class="value">P-5 San Antonio, Bislig City, Surigao del Sur, Philippines</div></div>
+        <div class="item"><div class="label">Course & Year Level</div><div class="value">BS Information Technology, 1st Year</div></div>
+      </div>
+
+      <div class="prose">
+        <h4>Short Biography</h4>
+        <p>I am a Bachelor of Science in Information Technology (BSIT) student from a simple and hardworking family. My family inspires me to continue studying and work toward achieving my goals in life. I enjoy creating simple designs and learning new skills that help me improve my creativity and technical abilities.</p>
+      </div>
+
+      <div class="prose">
+        <h4>Career Goals</h4>
+        <p>My career goal is to become a successful IT professional. I want to continue learning and improving my knowledge and skills in Information Technology so I can prepare myself for future opportunities. I hope to find a good and stable job that will allow me to support my family, provide them with a better life, and achieve my personal and professional goals.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-head">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg>
+        <h2>Educational Background</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="t-item">
+          <h4>Elementary School</h4>
+          <p>Requina Central Elementary School (2018 - 2019)</p>
+        </div>
+        <div class="t-item">
+          <h4>High School</h4>
+          <p>Mangagoy National High School (2022 - 2023)</p>
+        </div>
+        <div class="t-item">
+          <h4>Senior High School</h4>
+          <p>Mangagoy National High School - HUMMS Strand (2024- 2025)</p>
+        </div>
+        <div class="t-item">
+          <h4>College (Current)</h4>
+          <p>De La Salle John Bosco College - BS Information Technology (2025 - Present)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 6L2 12l6 6"/><path d="M16 6l6 6-6 6"/></svg>
+        <h2>Skills</h2>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-label">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M8 6L2 12l6 6"/><path d="M16 6l6 6-6 6"/></svg>
+          Programming Languages
+        </div>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag blue">Java Script (little learning)</span>
+        <span class="tag blue">Python (Biginner)</span>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-label">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Software Applications
+        </div>
+        <span class="tag">Micro Soft Office</span>
+        <span class="tag">Canva</span>
+        <span class="tag">VS Code</span>
+        <span class="tag">XAMPP</span>
+        <span class="tag">Claude, Chat GPT A.I</span>
+        <span class="tag">Adobe XD</span>
+        <span class="tag">Figma</span>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-label">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20c0-3.6 3-5.5 6.5-5.5s6.5 1.9 6.5 5.5"/><path d="M14.5 14.8c2.8.3 5 2 5 5.2"/></svg>
+          Soft Skills
+        </div>
+        <span class="tag blue">Communication</span>
+        <span class="tag blue">Teamwork</span>
+        <span class="tag blue">Time Management</span>
+        <span class="tag blue">Good Manners</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-head">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 7l2-3h5l2 3h9v11H3z"/></svg>
+        <h2>Projects</h2>
+      </div>
+
+      <div class="project-card">
+        <a href="explore.png" target="_blank" class="project-img-link">
+          <img src="explore.png" alt="Student Information System Screenshot" class="project-img1">
+        </a>
+        <div class="project-info">
+          <h4>Project Title: EXPLORE application</h4>
+          <p><strong>Description:</strong> A simple third party application about our Topic in World Religion in SHS, this also being use for research porouses in Research Festival (2nd Placer).</p>
+          <div class="tech-chips">
+            <span>HTML</span><span>CSS</span><span>Adobe XD</span><span>APK Builder</span>
+          </div>
+          <span class="status-pill">Completed</span><br>
+          <a> For this the link is bieng remove because the laptop i use is from my old school.</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <a href="discrete math app.png" target="_blank" class="project-img-link">
+          <img src="discrete math app.png" alt="Student Information System Screenshot" class="project-img1">
+        </a>
+        <div class="project-info">
+          <h4>Project Title: Discrete Math Project</h4>
+          <p><strong>Description:</strong> A simple third party appliccation about our Discrete Math topics. I choose Binomial Coefficients topic here.</p>
+          <div class="tech-chips">
+            <span>HTML</span><span>CSS</span><span>Adobe XD</span><span>APK Builder</span>
+          </div>
+          <span class="status-pill">Completed</span>
+          <a class="status-pill" href="https://drive.google.com/drive/folders/1t2pf22aaDiozR0XSOMNCJqpTLt1Ihva1?usp=sharing" target="_blank"> Click this for the link.</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <a href="CVCproject.png" target="_blank" class="project-img-link">
+          <img src="CVCproject.png" alt="Student Information System Screenshot" class="project-img1">
+        </a>
+        <div class="project-info">
+          <h4>Project Title: CVC Job Portal</h4>
+          <p><strong>Description:</strong> This is our group project for our programming subject</p>
+          <div class="tech-chips">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>A.I. tool (claude)</span>
+          </div>
+          <span class="status-pill">Completed</span>
+          <a class="status-pill"  href="https://humbleheartleejay.github.io/CVC-job-portal/" target="_blank"> Click this for the link.</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <a href="DLSJBCWebsiteproject.png" target="_blank" class="project-img-link">
+          <img src="DLSJBCWebsiteproject.png" alt="Student Information System Screenshot" class="project-img1">
+        </a>
+        <div class="project-info">
+          <h4>Project Title: DLSJBC website project</h4>
+          <p><strong>Description:</strong> This is our group project for our programming subject 2nd project .</p>
+          <div class="tech-chips">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>A.I. tool (claude)</span>
+          </div>
+          <span class="status-pill">Completed</span>
+          <a class="status-pill"  href="https://humbleheartleejay.github.io/DLSJBC-Website/" target="_blank"> Click this for the link.</a>
+        </div>
+      </div>
+
+
+    </section>
+
+    
+
+    <section id="achievements">
+      <div class="section-head">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 13l-1.5 8 5-2.5 5 2.5-1.5-8"/></svg>
+        <h2>Certificates and Achievements</h2>
+      </div>
+
+      <div class="ach-grid">
+        <div class="card">
+          <div class="card-head">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg>
+            <h4>Trainings Attended</h4>
+          </div>
+          <ul>
+            <li>BSP Jamboree (2025)</li>
+            <li>Red Cross (2025)</li>
+            <li>NSTP (2026)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+            <h4>Certificates Earned</h4>
+          </div>
+          <ul>
+            <li>Research Paper HUMMS category 2nd Placer. SHS Research Festival 2025</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 13l-1.5 8 5-2.5 5 2.5-1.5-8"/></svg>
+            <h4>Academic Awards</h4>
+          </div>
+          <ul>
+            <li>Honorable mention, SHS 2024-2025</li>
+            <li>Honorable mention, 1st, 2nd, 3rd Semester. 2025-2026</li>
+            <li>Service Awardee YES-O & BSP</li>
+            <li>Research 2nd Placer</li>
+            <li>Loyalty Award in MNHS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="section-head">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-4 4-3-3-6 6"/></svg>
+        <h2>Gallery</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <a class="gallery-item" href="humss gwapo.jpg" target="_blank">
+          <img src="humss gwapo.jpg" alt="Gallery photo 2">
+          <span class="cap">HUMMS Student na Gwapo</span>
+        </a>
+
+        <a class="gallery-item" href="nstp.jpg" target="_blank">
+          <img src="nstp.jpg" alt="Gallery photo 2">
+          <span class="cap">NSTP Student na Gwapo</span>
+        </a>
+
+        <a class="gallery-item" href="award.jpg" target="_blank">
+          <img src="award.jpg" alt="Gallery photo 3">
+          <span class="cap">Awards &amp; Graduation</span>
+        </a>
+
+        <a class="gallery-item" href="my cat.jpg" target="_blank">
+          <img src="my cat.jpg" alt="Gallery photo 4">
+          <span class="cap">My Cat</span>
+        </a>
+
+        <a class="gallery-item" href="bsp.jpg" target="_blank">
+          <img src="bsp.jpg" alt="Gallery photo 5">
+          <span class="cap">BSP Jamboree</span>
+        </a>
+
+        <a class="gallery-item" href="cave.jpg" target="_blank">
+          <img src="cave.jpg" alt="Gallery photo 6">
+          <span class="cap">BSP cave exploring</span>
+        </a>
+
+        <a class="gallery-item" href="friends.jpg" target="_blank">
+          <img src="friends.jpg" alt="Gallery photo 7">
+          <span class="cap">Friends #Jboy Boarders</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="section-head">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        <h2>Resume / Curriculum Vitae</h2>
+      </div>
+
+      <div class="resume-card">
+        <div>
+          <h3 style="color:var(--gold-300); margin-top:0;">Curriculum Vitae</h3>
+          <p>You may view or download my resume using the link below.</p>
+        </div>
+        <a class="resume-btn" href="https://drive.google.com/file/d/1a9e-0bOoNsVgdMmfIB0ZW2f8cfexEUZL/view?usp=sharing" target="_blank">
+          <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;stroke:var(--forest-950);"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
+          Download Resume (PDF)
+        </a>
+      </div>
+
+      <div class="prose">
+        <h4>Work Experience</h4>
+        <p>No formal work experience yet, open to on the job training,part time opportunities.</p>
+      </div>
+
+      <div class="prose">
+        <h4>References</h4>
+        <p>Available upon request.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social">
+        <a href="https://www.facebook.com/heartlee.jay.virtudazo.2024" target="_blank">Facebook</a> |
+        <a href="https://mail.google.com/mail/u/0/#search/in%3Asent+heartleevirtudazo99%40gmail.com" target="_blank">Email</a> |
+        <a href="https://www.linkedin.com/in/virtudazo-heartlee-a-9b2455437/" target="_blank">linkedin</a>
+      </div>
+      <p>@2026 Heartlee Jay A. Virtudazo. All Rights Reserved.</p>
+      <p class="fine">Last Updated: July 2026</p>
+    </footer>
+
+  </div>
+<script src="Js.js"></script>
+</body>
+</html>
