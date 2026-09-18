@@ -26,6 +26,7 @@
     <a href="#achievements">Achievements</a>
     <a href="#gallery">Gallery</a>
     <a href="#resume">Resume</a>
+    <a href="#teacher-score">Teacher's Score</a>
   </nav>
 
 
@@ -56,6 +57,9 @@
       <li><a href="#resume" data-nav>
         <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
         Resume</a></li>
+      <li><a href="#teacher-score" data-nav>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Teacher's Score</a></li>
     </ul>
     <div class="foot-note">&copy; 2026 Heartlee Jay A. Virtudazo</div>
   </nav>
@@ -357,6 +361,43 @@
         <h4>References</h4>
         <p>Available upon request.</p>
       </div>
+    </section>
+
+    <section id="teacher-score">
+      <div class="section-head">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <h2>Teacher's Score &amp; Feedback</h2>
+      </div>
+
+      <div class="prose" style="border-left-color: var(--forest-600);">
+        <h4>For My Teachers</h4>
+        <p>If you'd like to leave a score and feedback on this portfolio, please fill out the form below. It goes straight to my email.</p>
+      </div>
+
+      <form id="scoreForm" class="score-form">
+        <label for="teacherName">Teacher's Name</label>
+        <input type="text" id="teacherName" name="teacherName" placeholder="e.g. Ms. Santos" required>
+
+        <label for="score">Score (out of 100)</label>
+        <input type="number" id="score" name="score" placeholder="Enter score" min="0" max="100" required>
+
+        <label for="rating">Rating</label>
+        <select id="rating" name="rating" required>
+          <option value=""> Select Rating </option>
+          <option value="Excellent">Excellent</option>
+          <option value="Very Good">Very Good</option>
+          <option value="Good">Good</option>
+          <option value="Fair">Fair</option>
+          <option value="Needs Improvement">Needs Improvement</option>
+        </select>
+
+        <label for="comment">Comment (What's lacking or needs improvement)</label>
+        <textarea id="comment" name="comment" rows="4" placeholder="e.g. Add more project details, fix the layout on mobile..."></textarea>
+
+        <button type="submit">Submit Score</button>
+      </form>
+
+      <p id="feedback"></p>
     </section>
 
     <footer>
